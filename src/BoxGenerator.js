@@ -4,6 +4,7 @@ const BoxGenerator = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(e.target.colorField.value);
         props.addToList(e.target.colorField.value);
     }
 

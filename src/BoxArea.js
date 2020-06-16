@@ -4,8 +4,11 @@ const BoxArea = (props) => {
 
     const elements = [];
 
+    var boxNumber = 0;
+
     for (const color of props.colorList) {
-        elements.push(<div style="background-color: {color}"></div>)
+        elements.push(<div key = {boxNumber} className = "colorBox" style={{backgroundColor: color}}></div>);
+        boxNumber += 1;
     }
 
     return (
